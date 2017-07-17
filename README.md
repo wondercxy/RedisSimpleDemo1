@@ -173,7 +173,7 @@ public static void del(byte[] key) {
 ## 请求在Redis中的存储方式
 Redis以字符串"requests"为键，对应一个hash数据结构，里面存多个filed-value对，filed为requestId的值，value是请求的全文字符串。
 
-例如收到三个请求如下：
+例如收到三个请求如下：  
 {"requestId":100, "money":50}  
 {"requestId":101, "money":60}  
 {"requestId":100, "money":150}  
