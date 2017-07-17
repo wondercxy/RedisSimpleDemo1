@@ -1,6 +1,5 @@
 # 使用Redis实现简单请求队列缓存
 
-----------
 
 ## 架构概述
 ![][1]
@@ -175,11 +174,11 @@ public static void del(byte[] key) {
 Redis以字符串"requests"为键，对应一个hash数据结构，里面存多个filed-value对，filed为requestId的值，value是请求的全文字符串。
 
 例如收到三个请求如下：
-{"requestId":100, "money":50}
-{"requestId":101, "money":60}
-{"requestId":100, "money":150}
+{"requestId":100, "money":50}  
+{"requestId":101, "money":60}  
+{"requestId":100, "money":150}  
 
-则使用shell客户端查看Redis中存储的信息如下：
+则使用shell客户端查看Redis中存储的信息如下：  
 ![][2]
 
 ## 消费者的实现
